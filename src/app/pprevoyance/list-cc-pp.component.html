@@ -1,0 +1,16 @@
+<h1 class='center'>Prospection Prevoyance CC</h1>
+<div class='container'>
+<div class="row">
+<div *ngFor='let pp of pprevoyances' class="col s6 m4">
+  <div class="card horizontal" (click)="selectPPCC(pp)" ppccBorderCard>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>{{ pp.idCC }}</p>
+        <p>{{ pp.titre }}</p>
+        <p><small>{{ pp.dateMAJ | date:"dd/MM/yyyy" }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<div *ngIf="ppcc" class="row">
+<div class="col s12 m8 offset-m2">
+<h2 class="header center">{{ ppcc.titre }}</h2>
+<div class="card horizontal hoverable">
+  <div class="card-stacked">
+    <div class="card-content">
+      <table class="bordered striped">
+        <tbody>
+          <tr>
+            <td>ID</td>
+            <td><strong>{{ ppcc.idCC }}</strong></td>
+          </tr>
+          <tr>
+            <td>ID CC Annexé</td>
+            <td><strong>{{ ppcc.idCCAnnexe }}</strong></td>
+          </tr>
+          <tr>
+            <td>Date de MAJ</td>
+            <td><em>{{ ppcc.dateMAJ | date:"dd/MM/yyyy" }}</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-action">
+      <a (click)="goBack()">Retour</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<h4 *ngIf='!ppcc' class="center">Aucune Convention à afficher !</h4>
